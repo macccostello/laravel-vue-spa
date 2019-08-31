@@ -1,0 +1,130 @@
+.sidebar{
+ width: 230px;
+    background-color: #073039;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 800;
+
+    .logo-section{
+          padding: 20px 25px;
+    }
+
+    .sidebar-nav{
+      .nav-item{
+       .nav-link{
+              color: #a6c5cb;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+              padding: 15px 25px;
+
+            &:hover{
+               color: #38cb9f;
+            }
+
+       }
+
+       .nav-link.active{
+            background-color: #0d3841;
+          color: #38cb9f;
+       }
+      }
+    }
+}
+
+
+.sidebar-mini{
+    width: 65px;
+    .sidebar-nav{
+      .nav-item{
+        .nav-link{
+          width: 65px;
+          span{
+            display: none;
+          }
+        }
+      }
+    }
+}
+
+.setting-sidebar{
+  max-width: 20%;
+}
+
+.settings-card{
+  border-radius: 0;
+  box-shadow: none;
+      border: none;
+
+      .card-body{
+        padding: 0;
+      }
+
+}
+
+
+.settings-ul-nav {
+    padding: 20px
+}
+
+.settings-ul-nav .nav-item .nav-link {
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 13px;
+    transition: 0.2s all ease-out;
+    border-radius: 7px;
+    margin-bottom: 5px;
+      font-size: 12px;
+}
+
+.settings-ul-nav .nav-item .nav-link i {
+    font-size: 18px;
+    transition: 0.2s all ease-out
+}
+
+.settings-ul-nav .nav-item .nav-link:hover {
+         color: #005fb7;
+    background-color: #28a6f014;
+}
+.settings-ul-nav .nav-item .nav-link.active {
+      color: #005fb7;
+    background-color: #28a6f014;
+}
+
+.settings-ul-nav .nav-item .nav-link.active-tab {
+      color: #005fb7;
+}
+
+
+
+.settings-ul-nav .nav-item .nav-link[aria-expanded="true"] {
+      color: #005fb7;
+    background-color: #28a6f014;
+}
+
+.settings-ul-nav .nav-item .nav-link[aria-expanded="true"] i {
+    transform: rotate(360deg)
+}
+
+.settings-ul-nav-subnav {
+    margin-left: 20px;
+    margin-bottom: 15px
+}
+
+.settings-ul-nav-subnav .nav-item .nav-link {
+ font-weight: 500;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #888b90
+}
+
+.settings-ul-nav-subnav .nav-item .nav-link:hover {
+    color: #2658c7;
+    background-color: transparent
+}

@@ -1,0 +1,43 @@
+.topbar{
+    height: 55px;
+    box-shadow: none;
+    border-bottom: 1px solid #ebecf2;
+    padding: 0px 25px;
+}
+
+.avatar-dropdown{
+    padding: 0;
+    min-width: 250px;
+    top: 50px;
+    border-radius: 4px;
+    border-top: 1px #ebeff3 solid;
+
+    .avatar-info{
+           background-color: #f5f7f9;
+    border-radius: 2px 2px 0 0;
+    line-height: 1.42857;
+    padding: 10px 25px;
+      .name{
+          font-weight: 500;
+    color: #183247;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 2;
+      }
+      .email{
+         font-size: 12px;
+    color: #6f7c87;
+    margin-bottom: 0;
+    font-weight: 400;
+      }
+    }
+
+    a{
+          padding: 8px 25px;
+    border-radius: 2px;
+    margin: 0;
+    color: #183247;
+    font-size: 13px;
+    }
+}

@@ -1,0 +1,135 @@
+.btn{
+      font-size: 13px;
+    font-weight: 500;
+
+}
+
+
+
+.btn-success {
+    color: #fff;
+    background-color: #2eb983;
+    border-color: transparent;
+    padding: 7px 20px;
+
+    &:hover {
+        color: #fff;
+        background-color: #24a875;
+        border-color: #24a875;
+    }
+}
+
+.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active, .show > .btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: #24a875;
+    border-color: #24a875;
+}
+.btn-success:focus, .btn-success.focus {
+    box-shadow: none;
+}
+
+
+.btn-loading:after {
+    border: 2px solid #ffffff !important;
+}
+.btn-success.disabled,
+.btn-success:disabled {
+  color: #fff;
+  background-color: #24a875;
+  border-color: #24a875;
+}
+
+
+
+
+
+.btn-icon{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-light{
+    color: #17304a;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px 15px;
+}
+
+
+.btn-outline-light {
+    color: #ffffff;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px 15px;
+    border-color: #ffffff;
+}
+
+
+
+
+
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  color: transparent !important;
+
+  &:after {
+    animation: spinAround 500ms infinite linear;
+    border: 2px solid #dbdbdb;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: calc(50% - (1em / 2));
+    top: calc(50% - (1em / 2));
+  }
+}
+
+@keyframes spinAround {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+
+
+
+
+.btn-public{
+      background-color: rgb(89, 203, 89);
+    border-width: 1px;
+    border-color: transparent;
+    padding: 8px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    &:hover,&:active{
+        border-color: transparent;
+          background: rgb(43, 182, 86);
+    }
+}
+.btn-public:not(:disabled):not(.disabled):active:focus, .btn-public:not(:disabled):not(.disabled).active:focus, .show > .btn-public.dropdown-toggle:focus {
+    box-shadow: none;
+}
+.btn-public:focus, .btn-public.focus {
+    box-shadow: none;
+}
+.btn-public:not(:disabled):not(.disabled):active, .btn-public:not(:disabled):not(.disabled).active, .show > .btn-public.dropdown-toggle {
+    color: #fff;
+  background: rgb(19, 27, 21);
+   border-color: transparent;
+}
+
+
+.btn-social-login{
+     padding: 8px;
+     transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
