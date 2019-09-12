@@ -8,7 +8,7 @@ label {
 
 .form-control{
       font-size: 13px;
-    height: calc(1.5em + 0.75rem + 8px);
+    height: calc(1.5em + 0.75rem + 5px);
     border: 1px solid #d9e2ec;
     &:focus {
       color: #495057;
@@ -24,7 +24,15 @@ label {
 }
 
 
-
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+    font-size: 11px;
+    font-weight: 500;
+}
 
 .public-form-control{
   border-radius: 3px;
@@ -132,4 +140,22 @@ label {
     right: 0;
     padding: 0.65rem 1.25rem;
     color: inherit;
+}
+
+
+.search-input{
+  i{
+        position: absolute;
+    z-index: 8;
+    line-height: 42px;
+    padding: 0 14px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #495057;
+  }
+  .form-control{
+    padding-left: 40px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
 }

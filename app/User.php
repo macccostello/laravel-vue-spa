@@ -19,7 +19,7 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','phone','status','profile_image',
     ];
 
     /**
@@ -104,5 +104,10 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+     public function getDeadlineAttribute($date)
+    {
+        return $date ? date('m/d/Y', strtotime($date)) : null;
     }
 }

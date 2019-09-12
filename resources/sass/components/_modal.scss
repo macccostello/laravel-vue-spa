@@ -1,0 +1,229 @@
+.modal-header{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px 25px !important;
+    border-bottom: 1px solid #f9f9f9;
+    background-color: #fff;
+    padding-right: 25px !important;
+    min-height: 55px;
+    max-height: 55px;
+    height: 55px;
+
+    .close {
+        padding: 1rem;
+        margin: -1rem -1rem -1rem auto;
+        border-radius: 50px;
+        border: 1px solid #d4d4d4;
+        width: 30px;
+        height: 30px;
+        line-height: 0;
+        padding: 0;
+        text-align: center;
+
+        &:hover{
+            background-color: #f6f7f9;
+            border: none;
+            text-shadow: none;
+        }
+    }
+}
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+}
+
+.modal-footer {
+    padding: 15px 25px !important;
+    min-height: 55px;
+    max-height: 55px;
+    height: 55px;
+}
+
+
+/* Modal Center */
+.modal-center {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.modal-center.show {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.modal-center .modal-dialog {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%) !important;
+    transform: translate(-50%, 50%) !important;
+}
+
+/* ----- */
+
+
+/* Modal Right */
+
+.modal-right.show .modal-dialog {
+    -webkit-transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important;
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+}
+.modal-right .modal-dialog {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    -webkit-transform: translate(100%, 0) !important;
+    transform: translate(100%, 0) !important;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+@media (min-width: 576px){
+
+    .modal-right .modal-dialog {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        bottom: 0;
+           width: 32vw;
+        max-width: 100%;
+        margin: 0;
+        -webkit-transform: translate(100%, 0) !important;
+        transform: translate(100%, 0) !important;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+
+}
+
+
+
+
+
+.modal-right .modal-content {
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 0;
+    height: 100vh;
+    max-height: 100vh;
+    border: none;
+
+    .modal-header{
+      .modal-title{
+          font-size: 17px;
+          color: #0b5675;
+      }
+
+    }
+}
+
+
+
+
+
+.modal-right .modal-body {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    position: relative;
+    padding: 30px 30px;
+    height: calc(100vh - 110px);
+}
+
+
+@media (min-width: 992px){
+    .modal-650 {
+        max-width: 650px !important;
+    }
+}
+/* ----- */
+
+
+
+
+.modal-delete {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.modal-delete.show {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.modal-delete .modal-dialog {
+    margin: 0;
+    width: 400px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%) !important;
+    transform: translate(-50%, 50%) !important;
+    .modal-content{
+        border-radius: 10px;
+    }
+}
+
+
+@media (min-width: 576px){
+    .modal-delete .modal-dialog {
+        max-width: 500px;
+    }
+}
+
+
+.delete-modal-body{
+    padding: 37px 30px;
+    p{
+        font-size: 15px;
+        line-height: 60px;
+        font-weight: 400;
+    }
+    .btn{
+        padding: 7px 23px;
+    }
+
+    .btn-danger {
+        color: #fff;
+        background-color: #f73636;
+        border-color: #f73636;
+
+        &:hover{
+            background-color: #e01f1f;
+            border-color: #e01f1f;
+        }
+    }
+
+    .delete-close{
+        position: absolute;
+        top: 16px;
+        right: 25px;
+        font-size: 26px;
+        color: #d1d1d1;
+    }
+}

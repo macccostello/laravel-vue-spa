@@ -1,6 +1,6 @@
 <template>
 
-<div class="card table-card card-70">
+<div class="card  card-70">
   <div class="card-header">Account Settings </div>
   <div class="card-body">
     <form  @submit.prevent="update" @keydown="form.onKeydown($event)">

@@ -7,12 +7,12 @@
 
         <ul class="nav flex-column settings-ul-nav m-t-20">
 
-          <li v-for="tab in tabs" :key="tab.route" class="nav-item">
+          <!-- <li v-for="tab in tabs" :key="tab.route" class="nav-item">
             <router-link :to="{ name: tab.route }" class="nav-link" active-class="active">
               <fa :icon="tab.icon" fixed-width />
               {{ tab.name }}
             </router-link>
-          </li>
+          </li> -->
 
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><span>General</span> <i class='bx bx-chevron-down bx-rotate-270' ></i></a>
@@ -23,7 +23,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Users</a>
+                             <router-link to="users" class="nav-link" active-class="active-tab"> Users</router-link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Roles</a>

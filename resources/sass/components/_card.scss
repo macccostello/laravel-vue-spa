@@ -2,7 +2,7 @@
   box-shadow: 0 1px 3px 0 #dee3e6, 0 0 0 1px #dee3e6 !important;
 
   .card-header {
-    padding: 30px 30px;
+    padding: 20px 30px;
     background-color: #fff;
     border-bottom: none;
     padding-bottom: 0px;
@@ -26,4 +26,11 @@
   max-width: 100% !important;
   width: 70% !important;
   margin: auto !important;
+}
+
+
+.table-card{
+  .card-body{
+        padding: 20px 0;
+  }
 }

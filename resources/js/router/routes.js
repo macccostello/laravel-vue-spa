@@ -18,7 +18,9 @@ export default [
     children: [
       { path: '', redirect: { name: 'settings.profile' } },
       { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
-      { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
+      { path: 'password', name: 'settings.password', component: page('settings/password.vue') },
+
+      { path: 'users', name: 'settings.users', component: page('settings/users/UserList.vue') }
     ] },
 
   { path: '*', component: page('errors/404.vue') }
