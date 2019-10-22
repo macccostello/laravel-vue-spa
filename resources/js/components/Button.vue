@@ -7,7 +7,8 @@
         [`btn-${type}`]: true,
         'btn-block': block,
         'btn-lg': large,
-        'btn-loading': loading
+        'btn-loading': loading,
+        'btn-public':publicButton
       }"
       class="btn"
   >
@@ -41,6 +42,10 @@ export default {
     },
 
     large: {
+      type: Boolean,
+      default: false
+    },
+    publicButton: {
       type: Boolean,
       default: false
     }

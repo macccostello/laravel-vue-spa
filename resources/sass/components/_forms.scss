@@ -2,7 +2,7 @@ label {
     display: inline-block;
     margin-bottom: 0.5rem;
     font-size: 13px;
-    font-weight: 500;
+   font-weight: 600;
 }
 
 
@@ -158,4 +158,14 @@ label {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
+}
+
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #55988f;
+    background-color: #55988f;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(33, 170, 128, 0.2);
 }

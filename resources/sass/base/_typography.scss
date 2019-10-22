@@ -2,13 +2,13 @@
  * Basic typography style for copy text
  */
 body {
-  color: $dark-grey;
-  font-family: $font-roboto;
+
+  font-family: $text-font-stack;
   font-style: normal;
   font-weight: 400;
   font-size: $base-font-size;
   text-rendering: geometricPrecision;
-  background-color: #ebeff3;
+  background-color: #f4f7fb;
   height: 100%;
 }
 p{
@@ -20,7 +20,7 @@ a{
 }
 h1, h2, h3, h4, h5, h6{
   // color: $dark-grey;
-  font-family: $font-roboto;
+  font-family: $text-font-stack;
   font-style: normal;
   // font-weight: 700;
     text-rendering: geometricPrecision;

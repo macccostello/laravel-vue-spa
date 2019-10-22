@@ -21,32 +21,45 @@
 
   </div>
   <div class="card-body">
-      <datatable :columns="columns" :sortKey="sortKey" :sortOrders="sortOrders" @sort="sortBy">
+    <div class="is-loading" v-if="isLoading">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    {{selected}}
+    <alert-success :form="form" :message="'User Added Successfully'" />
+      <datatable :columns="columns" :sortKey="sortKey" :sortOrders="sortOrders" @sort="sortBy" @checkAll="checkAll">
+
             <tbody>
                 <tr v-for="user in users" :key="user.id">
+                  <td class="text-center">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" :value="user.id" v-model="selected" :id="user.id">
+                      <label class="custom-control-label" :for="user.id"></label>
+                    </div>
+                  </td>
                     <td>
                       <a href="" class="table-avatar">
                         <span class="avatar">
-                          <span>AW</span>
+                          <span>{{user.name.charAt(0)}}</span>
                         </span>
                           {{user.name}}
                       </a>
-
                       </td>
                     <td>{{user.email}}</td>
                     <td>{{user.phone}}</td>
                     <td>{{user.status}}</td>
                     <td>{{user.updated_at}}</td>
-                    <td>
-                      <a href="#!" @click="editUserModal(user)">Edit</a>
-                      <a href="#!">Delete</a>
+                    <td class="pl-4">
+                      <a href="#!" @click="editUserModal(user)" class="btn btn-sm btn-edit"><i class='bx bxs-pencil' ></i></a>
                     </td>
                 </tr>
             </tbody>
         </datatable>
         <pagination :pagination="pagination"
-                    @prev="getUsers(pagination.prevPageUrl)"
-                    @next="getUsers(pagination.nextPageUrl)">
+                  @prev="getUsers(pagination.prevPageUrl)"
+                  @next="getUsers(pagination.nextPageUrl)">
         </pagination>
   </div>
 </div>
@@ -66,7 +79,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <alert-success :form="form" :message="'Password Updated Successfully'" />
+
         <!-- <p>An image of the person, it's best if it has the same length and height</p> -->
         <div class="form-group">
           <div class="media align-items-center">
@@ -149,12 +162,15 @@ export default {
         });
         return {
            editUser: false,
+           isLoading:false,
             image: '',
             users: [],
             columns: columns,
             sortKey: 'name',
             sortOrders: sortOrders,
             perPage: ['10', '20', '30'],
+            selected: [],
+	         	selectAll: false,
             tableData: {
                 draw: 0,
                 length: 10,
@@ -191,15 +207,14 @@ export default {
         },
         newUserModal(){
             this.editUser = false;
-
             this.form.reset();
             $('#UserModal').modal('show');
         },
         async storeUser () {
           await this.form.post('/api/getUsers')
-          this.form.reset();
           this.getUsers();
-            $('#UserModal').modal('hide');
+          this.form.reset();
+          $('#UserModal').modal('hide');
         },
          async updateUser () {
            await this.form.post('/api/updateUser')
@@ -214,6 +229,7 @@ export default {
         },
 
         getUsers(url = '/api/getUsers') {
+             this.isLoading =true;
             this.tableData.draw++;
             axios.get(url, {params: this.tableData})
                 .then(response => {
@@ -222,6 +238,7 @@ export default {
                         this.users = data.data.data;
                         this.configPagination(data.data);
                     }
+                     this.isLoading =false;
                 })
                 .catch(errors => {
                     console.log(errors);
@@ -265,6 +282,16 @@ export default {
         },
         removeImage: function (e) {
           this.image = '';
+        },
+        checkAll() {
+
+          this.selected = [];
+          if (!this.selectAll) {
+            for (let i in this.users) {
+              this.selected.push(this.users[i].id);
+            }
+          }
+             this.selectAll = !this.selectAll;
         }
 
     }

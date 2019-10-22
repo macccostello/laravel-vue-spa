@@ -83,10 +83,10 @@ table{
     tr{
       td{
             padding: 0.75rem;
-    vertical-align: top;
+     vertical-align: middle !important;
     font-size: 13px;
     font-weight: 400;
-    border-top: 1px solid #dee9f2;
+    border-top: 1px solid #eaeef2;
       color: rgb(66, 90, 112);
       }
     }
@@ -135,8 +135,8 @@ table{
 .table-avatar{
   display: flex;
   align-items: center;
-  color: rgb(66, 90, 112);
-  font-weight: 500;
+          color: #065a3d;
+    font-weight: 600;
     padding: 0 10px;
     &:hover{
       text-decoration: none;
@@ -146,15 +146,43 @@ table{
     min-width: 32px;
     height: 32px;
     border-radius: 100%;
-        background-color: rgb(212, 238, 226);
-    color: rgb(0, 120, 62);
+   background-color: #edfaf6;
+    color: #319e65;
         display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 13px;
     margin-right: 10px;
   }
+}
+
+
+
+.is-loading{
+background-color: #ffffffc4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+
+  .spinner-border {
+    color: #a4b5bd;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: text-bottom;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border 0.50s linear infinite;
+    animation: spinner-border 0.50s linear infinite;
+}
 }

@@ -1,35 +1,53 @@
 .sidebar{
  width: 230px;
-    background-color: #073039;
+    //background-color: #062d39;
+       background-color: #003656;
+       //background-color: #ffffff;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 800;
+        border-right: 1px solid #e4edf2;
 
     .logo-section{
           padding: 20px 25px;
+          img{
+            height: 35px;
+          }
+
+          svg{
+            height: 35px;
+              fill: #ead780;
+          }
+
+          .cls-1{fill:#22d492;}.cls-2{fill:#ffeb00;}
     }
 
-    .sidebar-nav{
+    .sidebar-nav{                 
       .nav-item{
        .nav-link{
-              color: #a6c5cb;
-            font-size: 13px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-              padding: 15px 25px;
+               color: #c5d6e8;
+              font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 17px 25px;
 
             &:hover{
-               color: #38cb9f;
+               color: #ffffff;
+                   background-color: #064468;
+            }
+
+            .bx{
+                font-size: 18px !important;
             }
 
        }
 
        .nav-link.active{
-            background-color: #0d3841;
-          color: #38cb9f;
+               background-color: #064468;
+    color: #ffffff;
        }
       }
     }
@@ -71,7 +89,7 @@
 }
 
 .settings-ul-nav .nav-item .nav-link {
-    font-weight: 500;
+       font-weight: 600;
     color: #333;
     display: flex;
     align-items: center;
@@ -89,23 +107,23 @@
 }
 
 .settings-ul-nav .nav-item .nav-link:hover {
-         color: #005fb7;
-    background-color: #28a6f014;
+color: #105acf;
+    background-color: #fcfcfc;
 }
 .settings-ul-nav .nav-item .nav-link.active {
-      color: #005fb7;
-    background-color: #28a6f014;
+color: #105acf;
+    background-color: #fcfcfc;
 }
 
 .settings-ul-nav .nav-item .nav-link.active-tab {
-      color: #005fb7;
+      color: #2a8b61;
 }
 
 
 
 .settings-ul-nav .nav-item .nav-link[aria-expanded="true"] {
-      color: #005fb7;
-    background-color: #28a6f014;
+color: #105acf;
+    background-color: #fcfcfc;
 }
 
 .settings-ul-nav .nav-item .nav-link[aria-expanded="true"] i {
@@ -118,13 +136,13 @@
 }
 
 .settings-ul-nav-subnav .nav-item .nav-link {
- font-weight: 500;
+ font-weight: 600;
     padding: 4px 10px;
     font-size: 12px;
     color: #888b90
 }
 
 .settings-ul-nav-subnav .nav-item .nav-link:hover {
-    color: #2658c7;
+    color: #2a8b61;
     background-color: transparent
 }
